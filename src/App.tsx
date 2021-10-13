@@ -7,10 +7,10 @@ import { selectInfoList } from '@src/redux/payment/state/getInfo/getInfoSelector
 import './App.less'
 import { Button } from 'antd'
 
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import isLeapYear from 'dayjs/plugin/isLeapYear' // import plugin
 // import plugin
-import 'dayjs/locale/zh-cn' // import locale
+import 'dayjs/locale/ru' // import locale
 
 export const App = () => {
   const dispatch = useDispatch()
@@ -33,7 +33,9 @@ export const App = () => {
   )
 
   dayjs.extend(isLeapYear) // use plugin
-  dayjs.locale('zh-cn') // use locale
+  dayjs.locale('ru') // use locale
+  const now = dayjs()
+  console.log(now)
 
   return (
     <>

@@ -1,13 +1,14 @@
-import React from 'react'
-import { createBrowserHistory } from 'history'
 import './App.less'
-import dayjs from 'dayjs'
-import isLeapYear from 'dayjs/plugin/isLeapYear' // import plugin
 import 'dayjs/locale/ru'
-import { AppRouter } from '@src/AppRouter'
-import { Router } from 'react-router' // import locale
 
-export const App = () => {
+import { AppRouter } from '@src/AppRouter'
+import dayjs from 'dayjs'
+import isLeapYear from 'dayjs/plugin/isLeapYear'
+import { createBrowserHistory } from 'history'
+import React from 'react'
+import { Router } from 'react-router'
+
+export const App = (): JSX.Element => {
   dayjs.extend(isLeapYear) // use plugin
   dayjs.locale('ru') // use locale
 

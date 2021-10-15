@@ -1,6 +1,6 @@
-import React, { Suspense, lazy, useMemo } from 'react'
-import { Route, Switch } from 'react-router'
 import { ROOT_ROUTER_PATH } from '@constants/RootRouter'
+import React, { lazy, Suspense, useMemo } from 'react'
+import { Route, Switch } from 'react-router'
 
 export const AppRouter: React.FC = (): JSX.Element => {
   const HOME_PAGE = useMemo(() => lazy(() => import('./pages/home')), [])

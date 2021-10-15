@@ -1,9 +1,9 @@
-import { put, takeEvery } from 'redux-saga/effects'
+import { TInfoListRes } from '@src/api/payment/getInfo/declaration'
+import { INFO_RES_MOCK } from '@src/redux/payment/state/getInfo/__mocks__'
 import { SagaIterator } from 'redux-saga'
+import { put, takeEvery } from 'redux-saga/effects'
 
 import { getInfoRequest, getInfoSuccess } from './getInfoSlice'
-import { INFO_RES_MOCK } from '@src/redux/payment/state/getInfo/__mocks__'
-import { TInfoListRes } from '@src/api/payment/getInfo/declaration'
 
 export function* getInfoWorker(): SagaIterator {
   try {

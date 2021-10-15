@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import { Button } from 'antd'
 import { Counter } from '@src/Counter'
-import { useDispatch, useSelector } from 'react-redux'
 import { selectInfoList } from '@src/redux/payment/state/getInfo/getInfoSelectors'
 import { getInfoRequest } from '@src/redux/payment/state/getInfo/getInfoSlice'
+import { Button } from 'antd'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const Home = (): JSX.Element => {
   const dispatch = useDispatch()
@@ -29,6 +29,7 @@ export const Home = (): JSX.Element => {
     <>
       HOME
       <h1>React TypeScript Webpack Starter Template</h1>
+      <Button>Button</Button>
       <Button type="primary">Button</Button>
       <Counter />
     </>
